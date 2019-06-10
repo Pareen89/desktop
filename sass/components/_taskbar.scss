@@ -8,8 +8,41 @@
   align-items: center;
   justify-content: space-between;
   &__icons {
+    display: flex;
   }
   &__info {
     color: white;
+    display: grid;
+    height: 5rem;
+    grid-template-columns: 2fr 1fr;
+    row-gap: 0.3rem;
+    font-size: 1.25rem;
+    p {
+      user-select: none;
+    }
+    &-box1 {
+      grid-column: 1/2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      line-height: 1.45;
+      cursor: unset;
+      &:hover {
+        background-color: rgba(200, 200, 200, 0.1);
+      }
+    }
+    &-box2 {
+      grid-column: 2/3;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 1.5rem;
+      font-size: 1.25rem;
+      &:hover {
+        background-color: rgba(200, 200, 200, 0.1);
+      }
+    }
   }
 }
