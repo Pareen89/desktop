@@ -1,0 +1,14 @@
+// Base
+@import './base/base';
+// Components
+@import './components/taskbar';
+@import './components/icons';
+//layout
+
+//pages
+@import './pages/landingPage';
+
+//utilities
+@import './utilities/functions';
+@import './utilities/mixins';
+@import './utilities/variables';

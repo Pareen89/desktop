@@ -1,0 +1,19 @@
+// taskbar icons
+.taskbar-icon {
+  font-size: 2rem;
+  padding: 1.45rem 1.5rem;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background-color: rgba(200, 200, 200, 0.1);
+  }
+}
+.taskbar-icon:hover.fa-windows {
+  color: rgb(41, 201, 201);
+}
+
+.fa-windows {
+  color: white;
+}
+.fa-expand {
+  color: white;
+}
