@@ -8,8 +8,7 @@ window.addEventListener('load', () => {
     navigator.geolocation.getCurrentPosition(position => {
       long = position.coords.longitude;
       lat = position.coords.latitude;
-      console.log(long, lat);
-      const api = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=4da5d012ad5456829aaa191102f8a340`;
+      const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=4da5d012ad5456829aaa191102f8a340`;
       console.log(api);
       fetch(api)
         .then(response => {
