@@ -1,5 +1,32 @@
 let date = document.getElementById('date');
 let clock = document.getElementById('clock');
+let currentTemp = document.getElementById('temp');
+window.addEventListener('load', () => {
+  let long;
+  let lat;
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(position => {
+      long = position.coords.longitude;
+      lat = position.coords.latitude;
+      console.log(long, lat);
+      const api = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=4da5d012ad5456829aaa191102f8a340`;
+      console.log(api);
+      fetch(api)
+        .then(response => {
+          return response.json();
+        })
+        .then(data => {
+          const temp = data.main.temp;
+          let kelvin = 273.15;
+          let celsius = temp - kelvin;
+          let fahrenheit = Math.round((temp - kelvin) * (9 / 5) + 32);
+          currentTemp.innerHTML = fahrenheit;
+        });
+    });
+  }
+});
+
+// Time and Date
 function timeAndDate() {
   let now = new Date();
   let hour = now.getHours();
@@ -27,4 +54,5 @@ function timeAndDate() {
   document.getElementById('date').innerHTML = date;
 }
 let update = setInterval(timeAndDate, 1000);
+let temp = '';
 //
