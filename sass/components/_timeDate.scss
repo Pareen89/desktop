@@ -4,11 +4,11 @@
   width: 30rem;
   position: absolute;
   right: 0;
-  bottom: -60rem;
+  bottom: -1000rem;
   transition: all 0.3s ease-in-out;
   @include respond(tab-port) {
     bottom: none;
-    top: -80rem;
+    top: -500rem;
     height: 100vh;
     width: 100vw;
   }
