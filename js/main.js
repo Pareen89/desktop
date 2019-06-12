@@ -1,11 +1,13 @@
 let date = document.getElementById('date');
+let dateTwo = document.getElementById('dateTwo');
 let clock = document.getElementById('clock');
 let clockTwo = document.getElementById('clockTwo');
 let currentTemp = document.getElementById('temp');
 let box1 = document.getElementById('box1');
 let timeDateShow = document.getElementById('timeDateShow');
 let clockSet = document.getElementById('check');
-
+/////TOGGLES////
+// Date and Clock
 box1.addEventListener('click', function() {
   console.log('clicked');
   timeDateShow.classList.toggle('timeDateShow');
@@ -58,24 +60,49 @@ function timeAndDate() {
   if (hour > 12) {
     set = 'PM';
     time = `${hour - 12}:${min} PM`;
-    timeTwo = `${hour - 12}:${min}:${seconds}`;
+    timeTwo = `${hour - 12}:${min}:${seconds} PM`;
   } else if (hour === 0) {
     set = 'AM';
     hour = 12;
     time = `${hour}:${min} AM`;
-    timeTwo = `${hour}:${min}:${seconds}`;
+    timeTwo = `${hour}:${min}:${seconds} AM`;
   } else {
     set = 'AM';
     time = `${hour}:${min} AM`;
-    timeTwo = `${hour}:${min}:${seconds}`;
+    timeTwo = `${hour}:${min}:${seconds} AM`;
   }
+  let d_names = [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday'
+  ];
+  let m_names = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'November',
+    'December'
+  ];
 
   let d = `${month}/${day}/${year}`;
+  let dTwo = `${d_names[days]}, ${m_names[month - 1]} ${day}, ${year}`;
+
   // assigning time and date to website
   clock.innerHTML = time;
   clockTwo.innerHTML = timeTwo;
   date.innerHTML = d;
   clockSet.innerHTML = set;
+  dateTwo.innerHTML = dTwo;
 }
 let update = setInterval(timeAndDate, 1000);
 let temp = '';
