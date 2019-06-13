@@ -48,3 +48,8 @@ $breakpoint:
     //1350px
   }
 }
+// Width and Height
+@mixin Size($h, $w) {
+  height: $h;
+  width: $w;
+}

@@ -1,0 +1,32 @@
+.template {
+  height: 95vh;
+  width: 100vw;
+  display: none;
+  @include respond(tab-port) {
+    height: 100vh;
+  }
+  &__topbar {
+    height: 3rem;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: red;
+    i {
+      font-size: 1.5rem;
+      padding: 0.85rem 1.5rem;
+      cursor: pointer;
+      &:hover {
+        background-color: black;
+        color: red;
+      }
+    }
+  }
+  &__program {
+    height: 92rem;
+    background-color: green;
+    @include respond(tab-port) {
+      height: 97rem;
+    }
+  }
+}

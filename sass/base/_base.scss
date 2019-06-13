@@ -22,3 +22,15 @@ html {
 body {
   overflow: hidden;
 }
+a {
+  text-decoration: none;
+  &:link {
+    color: black;
+  }
+  &:visited {
+    color: black;
+  }
+}
+ul {
+  list-style: none;
+}

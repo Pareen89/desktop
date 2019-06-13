@@ -11,6 +11,7 @@
   @include respond(tab-port) {
     bottom: none;
     top: 0;
+    z-index: -1;
   }
   &__icons {
     display: flex;
