@@ -2,8 +2,7 @@
   top: 0;
   width: 100vw;
   height: 95vh;
-  background-color: red;
-  display: none;
+  background-color: #f4f4f4;
   @include respond(tab-port) {
     height: 100vh;
   }
@@ -14,7 +13,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #f4f4f4;
+    background-color: #ee931c;
     &-img {
       background-image: url('https://images.unsplash.com/photo-1502082553048-f009c37129b9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
       background-position: center;
@@ -22,18 +21,28 @@
       background-size: cover;
       border: 0.2rem solid black;
       border-radius: 100rem;
-      height: 10rem;
-      width: 10rem;
-      margin-bottom: 1.5rem;
+      height: 13rem;
+      width: 13rem;
+      margin-bottom: 5.5rem;
     }
     &-list {
       display: flex;
       flex-direction: column;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
+      font-weight: bold;
       &-items {
-        padding: 1rem 0rem;
+        padding: 3rem 0rem;
         text-align: center;
         text-transform: uppercase;
+        a {
+          color: rgb(24, 23, 23);
+          transition: all 0.3s ease-in-out;
+          padding: 1rem;
+          letter-spacing: 0.3rem;
+        }
+        a:hover {
+          color: #f4f4f4;
+        }
       }
     }
   }

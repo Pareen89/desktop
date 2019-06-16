@@ -1,7 +1,6 @@
 .template {
   height: 95vh;
   width: 100vw;
-  display: none;
   @include respond(tab-port) {
     height: 100vh;
   }
@@ -11,20 +10,29 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background-color: red;
+    background-color: rgb(230, 230, 230);
     i {
       font-size: 1.5rem;
-      padding: 0.85rem 1.5rem;
+      padding: 0.85rem 1.85rem;
       cursor: pointer;
       &:hover {
-        background-color: black;
-        color: red;
+        background-color: #d12222;
+        color: #f4f4f4;
+        @include respond(tab-port) {
+          background-color: transparent;
+          color: black;
+        }
+      }
+    }
+    .fa-minus {
+      @include respond(tab-port) {
+        display: none;
       }
     }
   }
   &__program {
     height: 92rem;
-    background-color: green;
+    background-color: #f4f4f4;
     @include respond(tab-port) {
       height: 97rem;
     }
